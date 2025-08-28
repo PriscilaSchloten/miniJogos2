@@ -1,0 +1,107 @@
+@import url(https://fonts.google.com/selection/embed);
+
+.style-script-regular {
+    font-family: "Style Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background-image: url("/img/fundo_dialogoAlice.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 10%;
+    position: fixed;
+}
+
+.dialogo {
+    color: black;
+    font-size: 1.6em;
+    object-fit: cover;
+    font-weight: 700;
+    border-right: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 85ch;
+    animation: blink-caret .40s step-end infinite;
+    position: relative;
+    left: 42%;
+    padding-top: 350px;
+}
+
+@keyframes mark {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes write {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85ch;
+    }
+}
+
+@keyframes blink-caret {
+    100% {
+        border-color: transparent;
+    }
+}
+
+.botao_avancar {
+    font-family: "Nunito", sans-serif;
+    width: 10%;
+    padding: 5px 0;
+    background: rgb(255, 255, 255);
+    color: rgb(66, 109, 129);
+    border-color: rgb(66, 109, 129);
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: fixed;
+    left: 70%;
+    top: 82%;
+    opacity: 0.5;
+    pointer-events: none; 
+}
+
+.botao_avancar.active {
+    opacity: 1; /* Opacidade total */
+    pointer-events: auto; /* Agora clicável */
+}
+
+.botao_avancar:active {
+    transform: scale(1.05);
+    background-color: #003d82;
+    color: aliceblue;
+}
+
+.botao_voltar {
+    font-family: "Nunito", sans-serif;
+    width: 10%;
+    padding: 5px 0;
+    background: rgba(241, 238, 238, 0.788);
+    color: rgb(66, 109, 129);
+    border-color: rgb(66, 109, 129);
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 1s all;
+    position: fixed;
+    left: 2%;
+    top: 92%;
+    transition: all 0.3s ease;
+}
+
+.botao_voltar:active {
+    transform: scale(1.05);
+    background-color: #003d82;
+    color: aliceblue;
+}

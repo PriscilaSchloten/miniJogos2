@@ -1,0 +1,299 @@
+/* Fonte importada e colocada na font-family */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Pixelify+Sans:wght@400..700&family=Style+Script&display=swap');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.titulo-principal {
+    width: 100%;
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px #0044ff, 0 0 40px #370377;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    z-index: 2;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .titulo-principal {
+        font-size: 2rem;
+        margin-top: 16px;
+        margin-bottom: 6px;
+    }
+}
+
+/* Fundo responsivo */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* fundo (video) */
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+/* config botoes */
+.botoes-container {
+    position: absolute;
+    top: 42%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 90vw;
+    max-width: 450px;
+    min-width: 220px;
+}
+
+
+/* Botões principais */
+.botao_contato,
+.botao_coluna,
+.botao_frase,
+.botao_jogar,
+.botao_ranking,
+.teste {
+    width: 90vw;
+    max-width: 400px;
+    min-width: 180px;
+    padding: 16px 10vw;
+    font-size: 5vw;
+    min-font-size: 18px;
+    max-font-size: 28px;
+    margin: 10px 0;
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    width: 400px;
+    padding: 22px 48px;
+    margin: 18px;
+    background: rgb(95, 21, 192);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+    box-shadow: 0 0 40px rgba(0, 43, 233, 0.5), 0 0 80px #0044ff33;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.5s;
+    /* Remove animação padrão */
+    animation: none;
+}
+
+/* Ajuste de fonte para telas pequenas */
+@media (max-width: 600px) {
+
+    .botao_contato,
+    .botao_coluna,
+    .botao_frase,
+    .botao_jogar,
+    .botao_ranking,
+    .teste {
+        font-size: 18px;
+        padding: 12px 5vw;
+        max-width: 95vw;
+    }
+
+    .botoes-container {
+        top: 48%;
+        gap: 12px;
+        max-width: 98vw;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 400px) {
+
+    .botao_contato,
+    .botao_coluna,
+    .botao_frase,
+    .botao_jogar,
+    .botao_ranking,
+    .teste {
+        font-size: 15px;
+        padding: 8px 2vw;
+        min-width: 120px;
+    }
+
+    .botoes-container {
+        top: 52%;
+        gap: 8px;
+        min-width: 120px;
+    }
+}
+
+.botao_contato:hover,
+.botao_coluna:hover,
+.botao_frase:hover,
+.botao_jogar:hover,
+.botao_ranking:hover,
+.teste:hover {
+    background: #370377;
+    color: #ffffff;
+    box-shadow: none;
+    transform: scale(1.085);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+
+/* Bordas animadas só no hover */
+.botao_contato span,
+.botao_coluna span,
+.botao_frase span,
+.botao_jogar span,
+.botao_ranking span,
+.teste span {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.botao_contato:hover span,
+.botao_coluna:hover span,
+.botao_frase:hover span,
+.botao_jogar:hover span,
+.botao_ranking:hover span,
+.teste:hover span {
+    opacity: 1;
+}
+
+.botao_contato span,
+.botao_coluna span,
+.botao_frase span,
+.botao_jogar span,
+.botao_ranking span,
+.teste span {
+    position: absolute;
+}
+
+/* Topo */
+.botao_contato span:nth-child(1),
+.botao_coluna span:nth-child(1),
+.botao_frase span:nth-child(1),
+.botao_jogar span:nth-child(1),
+.botao_ranking span:nth-child(1),
+.teste span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to left, transparent, #3ce8ff);
+    animation: animateTop 2s linear infinite;
+}
+
+/* Direita */
+.botao_contato span:nth-child(2),
+.botao_coluna span:nth-child(2),
+.botao_frase span:nth-child(2),
+.botao_jogar span:nth-child(2),
+.botao_ranking span:nth-child(2),
+.teste span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #b638ff);
+    animation: animateRight 2s linear -1s infinite;
+}
+
+/* Base */
+.botao_contato span:nth-child(3),
+.botao_coluna span:nth-child(3),
+.botao_frase span:nth-child(3),
+.botao_jogar span:nth-child(3),
+.botao_ranking span:nth-child(3),
+.teste span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #00fff7);
+    animation: animateBottom 2s linear infinite;
+}
+
+/* Esquerda */
+.botao_contato span:nth-child(4),
+.botao_coluna span:nth-child(4),
+.botao_frase span:nth-child(4),
+.botao_jogar span:nth-child(4),
+.botao_ranking span:nth-child(4),
+.teste span:nth-child(4) {
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #b638ff);
+    animation: animateLeft 2s linear -1s infinite;
+}
+
+/* animações */
+@keyframes animateTop {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animateRight {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes animateBottom {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animateLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}

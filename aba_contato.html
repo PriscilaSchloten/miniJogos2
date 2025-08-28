@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contato.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <section>
+        <h2>Contato</h2>
+        <form action="https://api.staticforms.xyz/submit" method="post">
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+            <br>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+            <label>Mensagem</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="accessKey" value="f458a848-e2e0-4b6e-934a-2bc5784dbece">
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/agradecimentoContato.html">
+            <a href="index.html"><input class="botao_voltar" type="button" value="Voltar"></a>
+
+        </form>
+    </section>
+</body>
+</html>

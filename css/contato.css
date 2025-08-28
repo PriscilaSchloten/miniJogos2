@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #370377 60%, #111 100%);
+    font-family: 'Nunito', sans-serif;
+}
+
+section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 32px #37037733;
+    padding: 32px 32px 24px 32px;
+    width: 95vw;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #222;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #222;
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #222;
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button[type="submit"] {
+    background: linear-gradient(90deg, #7c3aed 0%, #a21caf 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 0 12px #a21caf33;
+}
+
+form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #a21caf 0%, #7c3aed 100%);
+    transform: scale(1.04);
+}
+
+.botao_voltar {
+    margin-top: 10px;
+    background: transparent;
+    color: #7c3aed;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 18px 8vw;
+        max-width: 98vw;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

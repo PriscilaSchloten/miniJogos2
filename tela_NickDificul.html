@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <title>Alice no País das Maravilhas: Jogo da Memória</title>
+
+    <link rel="stylesheet" href="/css/nickDificul.css">
+    <script defer src="/javascript/nickPlayer.js"></script>
+
+</head>
+
+<body>
+    <!-- imagem fundo -->
+    <div class="container">
+        <img class="fundo_telaNick" src="/img/fundoNick.jpg" alt="Imagem de fundo" style="width: 100%;">
+        <div class="centered-text">
+        </div>
+        <span id="mensagem"></span>
+
+        <!-- titulo + botões de dificuldade + confirmação -->
+        <form id="form-validar">
+            <div class="titulo_dificuldade">Selecione a dificuldade:</div>
+            <div class="dificuldade-button">
+                <input id="lvlFacil" type="radio" value="Fácil" name="botao">
+                <label for="lvlFacil">Fácil</label>
+                <input id="lvlMedio" type="radio" value="Médio" name="botao">
+                <label for="lvlMedio">Médio</label>
+                <input id="lvlDificil" type="radio" value="Difícil" name="botao">
+                <label for="lvlDificil">Difícil</label>
+                <input id="lvlInsano" type="radio" value="Insano" name="botao">
+                <label for="lvlInsano">Insano</label>
+            </div>
+            <span id="mensagem"></span>
+            <div class="botoes-rodape">
+                <a href="index.html"><input class="botao_voltar" type="button" value="Voltar"></a>
+                <button type="submit" class="botao_dificuldadeConfirmar">Confirmar</button>
+            </div>
+        </form>
+</body>
+
+</html>

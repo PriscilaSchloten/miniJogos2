@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
+
+.nunito-uniquifier {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+body {
+  background-color: rgb(136, 0, 0);
+}
+.fundo_JogoMemoria {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(136, 0, 0);
+    font-size: 2.0em;
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    left: 250px;
+    border-radius: 5px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  
+  .carta {
+    aspect-ratio: 3/4;
+    width: 100%;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+  }
+  
+  .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transition: all 400ms ease;
+  }
+  
+  .frente {
+    transform: rotateY(180deg);
+  }
+  
+  .traseira {
+    background-image: url('/img/cartaCoelho_Dificil.png');
+    backface-visibility: hidden;
+  }
+  
+  .revelar-carta {
+    transform: rotateY(180deg);
+  }
+  
+  .disabilitar-carta {
+    filter: saturate(0);
+    opacity: 0.5;
+  }
+  @media screen and (max-width: 600px) {
+  header {
+    font-size: 1.2em;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 920px) {
+  header {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+}
