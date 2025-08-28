@@ -111,7 +111,7 @@ const createCarta = (character) => {
   const traseira = createElement('div', 'face traseira');
 
   //traseira da carta
-  frente.style.backgroundImage = `url('/img/${character}.png')`
+  frente.style.backgroundImage = `url('./img/${character}.png')`
 
   //Junta a frente e a parte traseira da carta ao conteiner carta
   carta.appendChild(frente);
