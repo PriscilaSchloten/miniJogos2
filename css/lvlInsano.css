@@ -67,7 +67,7 @@ header {
 }
 
 .traseira {
-  background-image: url('/img/cartaRainhaCopas_Insano.png');
+  background-image: url('./img/cartaRainhaCopas_Insano.png');
   backface-visibility: hidden;
 }
 

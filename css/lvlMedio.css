@@ -66,7 +66,7 @@ body {
   }
   
   .traseira {
-    background-image: url('/img/cartaChapeleiro_Medio.png');
+    background-image: url('./img/cartaChapeleiro_Medio.png');
     backface-visibility: hidden;
   }
   

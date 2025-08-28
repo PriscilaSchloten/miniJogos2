@@ -69,7 +69,7 @@ header {
 }
 
 .traseira {
-  background-image: url('/img/cartaAlice_Facil.png');
+  background-image: url('./img/cartaAlice_Facil.png');
   backface-visibility: hidden;
 }
 

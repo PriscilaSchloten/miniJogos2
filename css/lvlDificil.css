@@ -66,7 +66,7 @@ body {
   }
   
   .traseira {
-    background-image: url('/img/cartaCoelho_Dificil.png');
+    background-image: url('./img/cartaCoelho_Dificil.png');
     backface-visibility: hidden;
   }
   
