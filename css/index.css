@@ -7,30 +7,47 @@ html {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
 .titulo-principal {
-    width: 100%;
+    position: absolute;
+    top: 2.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 1100px;
     text-align: center;
-    font-size: 3.2rem;
+    font-size: clamp(1.3rem, 5vw, 2.8rem);
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
     color: #fff;
     text-shadow: 0 0 20px #0044ff, 0 0 40px #370377;
-    margin-top: 32px;
-    margin-bottom: 10px;
+    margin: 0;
     letter-spacing: 2px;
-    z-index: 2;
-    position: relative;
+    z-index: 10;
+    pointer-events: none;
 }
 
 @media (max-width: 600px) {
     .titulo-principal {
-        font-size: 2rem;
-        margin-top: 16px;
-        margin-bottom: 6px;
+        font-size: clamp(1.1rem, 7vw, 2rem);
+        top: 10px;
+        padding: 0 4vw;
+    }
+    .botoes-container {
+        top: 22vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .titulo-principal {
+        font-size: clamp(0.9rem, 8vw, 1.3rem);
+        top: 6px;
+        padding: 0 2vw;
+    }
+    .botoes-container {
+        top: 18vh;
     }
 }
 
@@ -62,9 +79,9 @@ html {
 /* config botoes */
 .botoes-container {
     position: absolute;
-    top: 42%;
-    left: 48%;
-    transform: translate(-50%, -50%);
+    top: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -72,6 +89,7 @@ html {
     width: 90vw;
     max-width: 450px;
     min-width: 220px;
+    z-index: 5;
 }
 
 
